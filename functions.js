@@ -1,4 +1,4 @@
-const getProductsOfNormalQuality = () => {};
+const getProductsOfNormalQuality = (pProducts) => pProducts.filter(product => product.quality === "Normal");
 
 const getProductImageWithPngExtension = () => {};
 
