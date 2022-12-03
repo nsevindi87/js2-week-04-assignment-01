@@ -1,10 +1,10 @@
 const getProductsOfNormalQuality = (pProducts) => pProducts.filter(product => product.quality === "Normal");
 
-const getProductImageWithPngExtension = () => {};
+const getProductImageWithPngExtension = (pProducts) => pProducts.filter((url) => (/png/).test(url.productImage));
 
-const getCalorieOfTheMostExpensiveProduct = () => {};
+const getCalorieOfTheMostExpensiveProduct = (pProducts) => pProducts.sort((a,b)=> b.price - a.price)[0].totalCalories;
 
-const sortByExpirationDate = () => {};
+const sortByExpirationDate = (pProducts) => pProducts.sort((a,b) => a.expireDate - b.expireDate);
 
 export {
   getProductsOfNormalQuality,
